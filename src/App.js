@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <h1 className="title">Jack Zhou</h1>
-      <p className="linkedin"><a href="https://linkedin.com/in/feng-jack-zhou-b46a69111">LinkedIn</a></p>
+      <p className="linkedin"><a href="https://linkedin.com/in/jack-zhou-b46a69111">LinkedIn</a></p>
       <h2 className="email">Email:jackmkj@gmail.com</h2>
       <VerticalTimeline>
         {timelineElements.map((element) => {
