@@ -63,6 +63,7 @@ function App() {
           );
         })}
       </VerticalTimeline>
+      <h6 className="footer">"To be continued~~~~~"</h6>
     </div>
   );
 }
