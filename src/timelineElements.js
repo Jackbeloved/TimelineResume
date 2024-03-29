@@ -19,7 +19,7 @@ let timelineElements = [
     // buttonText: "View SSRS Projects",
     date: "Feburary 2020 - December 2021",
     icon: "work",
-    logo: <img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Huon_Aquaculture_logo.png" alt="alternatetext" style={{ textAlign: 'right' }}></img>
+    logo: <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Huon_Aqua_Logo_Web.png" alt="alternatetext" style={{ textAlign: 'right' }}></img>
   },
   {
     id: 2,
