@@ -8,7 +8,7 @@ let timelineElements = [
     // buttonText: "View SSRS Projects",
     date: "December 2021 - present",
     icon: "work",
-    logo: <img src="https://www.tas.gov.au/stds/tasgov_large.gif" alt="alternatetext" style={{ textAlign: 'right' }}></img>
+    logo: <img src="https://www.communications.tas.gov.au/__data/assets/image/0021/17355/100079-Tas-Gov_no-tag_rgb_vert.jpg" alt="alternatetext" style={{ textAlign: 'right' }}></img>
   },
   {
     id: 1,
