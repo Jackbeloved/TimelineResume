@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/timelineResume/static/css/main.b6371344.css",
+    "main.js": "/timelineResume/static/js/main.d49f3879.js",
+    "static/js/787.e097d17b.chunk.js": "/timelineResume/static/js/787.e097d17b.chunk.js",
+    "static/media/HUON.png": "/timelineResume/static/media/HUON.3ed65ecea3a4c8c4e8ab.png",
+    "static/media/ZJGSU.png": "/timelineResume/static/media/ZJGSU.fa2cb5d84cc05824e935.png",
+    "static/media/CBA.png": "/timelineResume/static/media/CBA.45a7e504781a1aa140b1.png",
+    "static/media/TAS_GOV.png": "/timelineResume/static/media/TAS_GOV.a608e6c238d591f800f9.png",
+    "static/media/UTAS.png": "/timelineResume/static/media/UTAS.82dda4c52c62b2b2e1aa.png",
+    "index.html": "/timelineResume/index.html",
+    "main.b6371344.css.map": "/timelineResume/static/css/main.b6371344.css.map",
+    "main.d49f3879.js.map": "/timelineResume/static/js/main.d49f3879.js.map",
+    "787.e097d17b.chunk.js.map": "/timelineResume/static/js/787.e097d17b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6371344.css",
+    "static/js/main.d49f3879.js"
+  ]
+}
