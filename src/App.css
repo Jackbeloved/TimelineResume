@@ -1,47 +1,103 @@
+:root {
+  --timeline-bg-light: #ffffff;
+  --timeline-bg-dark: #080028;
+  --timeline-text-light: #000000;
+  --timeline-text-dark: #ffffff;
+}
+
 body {
-  background: #080808;
+  margin: 0;
+  padding: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  color: rgb(53, 53, 53);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.theme-toggle-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle-button:hover {
+  background-color: #0056b3;
 }
 
 .title {
-  font-size: 4.5em;
-  color: white;
-  text-align: center; 
+  font-size: 4em;
+  text-align: center;
   font-family: "Bebas Neue", sans-serif;
-  
+}
+
+.subtitle {
+  font-size: 1.8em;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 0.5em;
 }
 
 .linkedin {
   font-size: 1.5em;
-  text-align: center; 
+  text-align: center;
   font-family: "Bebas Neue", sans-serif;
-  
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .email {
   font-size: 1.5em;
-  color: white;
-  text-align: center; 
+  text-align: center;
   font-family: "Bebas Neue", sans-serif;
-  cursor: pointer; /* Add this line to change the cursor to pointer */
+  cursor: pointer;
 }
 
-h3 {
-  padding-top: 0.25em;
-
-}
-
-.vertical-timeline-element-content {
-  background-color: #080028 !important; 
+/* .vertical-timeline-element-content {
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
     0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
   padding: 1.5em 3em !important;
+} */
+.vertical-timeline-element-content {
+  transition: background-color 0.3s, color 0.3s;
+  padding: 1.5em 3em !important;
 }
 
+.light-mode .vertical-timeline-element-content {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.dark-mode .vertical-timeline-element-content {
+  background-color: #080028 !important;
+  color: #ffffff !important;
+}
 .date {
-  color:white !important;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.timeline-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .vertical-timeline-element-logo {
@@ -51,17 +107,14 @@ h3 {
 }
 
 .vertical-timeline-element-subtitle {
-  color: white;
   text-align: center;
 }
 
 .vertical-timeline-element-title {
-  color: white;
   text-align: center;
 }
 
 .description {
-  color: white;
   margin: 1em 0 2em 0;
 }
 
@@ -86,21 +139,4 @@ h3 {
 
 .schoolButton:hover {
   background-color: #f3bc3c;
-}
-
-@media only screen and (max-width: 1700px) {
-  .vertical-timeline-element-date {
-    display: block !important;
-    float: none !important;
-    color: rgb(44, 44, 44);
-    margin-top: 1.5em;
-  }
-}
-
-.footer {
-  font-size: 4em;
-  color: white;
-  text-align: center; 
-  font-family: "Bebas Neue", sans-serif;
-  
 }

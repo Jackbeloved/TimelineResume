@@ -1,9 +1,8 @@
+import React, { useState,useEffect } from "react";
 import "./App.css";
-import { ReactComponent as WorkIcon } from "./work.svg";
-import { ReactComponent as SchoolIcon } from "./school.svg";
-// improt database
+// import database
 import timelineElements from "./timelineElements";
-//import pluginnpm
+//import plugins
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -12,22 +11,33 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 function App() {
-  let workIconStyles = { background: "#06D6A0" };
-  let schoolIconStyles = { background: "#f9c74f" };
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark-mode" : "light-mode";
+  }, [darkMode]);
 
   const handleEmailClick = () => {
     window.location.href = "mailto:jackmkj@gmail.com";
   };
 
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div>
+    <div className={darkMode ? "app dark-mode" : "app light-mode"}>
+    <button className="theme-toggle-button" onClick={toggleTheme}>
+      {darkMode ? "Light Mode" : "Dark Mode"}
+    </button>
       <h1 className="title">Hi, I'm Jack Zhou</h1>
-      <p className="linkedin"><a href="https://linkedin.com/in/jack-zhou-b46a69111">LinkedIn</a></p>
-      <h2 className="email" onClick={handleEmailClick}>Email: jackmkj@gmail.com</h2>
-      <h2 className="linkedin">https://www.linkedin.com/in/jzhou-da/</h2>
+      <h2 className="subtitle">Data@CBA | Data Enthusiast</h2>
+      <h2 className="linkedin" href="https://www.linkedin.com/in/jzhou-da/" target="_blank" rel="noopener noreferrer">
+      <strong>LinkedIn:</strong> linkedin.com/in/jzhou-da
+      </h2>
+      <h2 className="email" onClick={handleEmailClick}><strong>Email:</strong> jackmkj@gmail.com</h2>
       <VerticalTimeline>
         {timelineElements.map((element) => {
-          let isWorkIcon = element.icon === "work";
           let showButton =
             element.buttonText !== undefined &&
             element.buttonText !== null &&
@@ -38,13 +48,10 @@ function App() {
               key={element.key}
               date={element.date}
               dateClassName="date"
-              iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
-              icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
+              iconStyle={{ background: "white" }}
+              icon={<img src={element.icon} alt="icon" className="timeline-icon"  />}
             >
               
-              {/* <div className="vertical-timeline-element-logo"> 
-                {element.logo}
-              </div> */}
               <h3 className="vertical-timeline-element-title">
                 {element.position} 
               </h3>
@@ -54,16 +61,11 @@ function App() {
               <h5 className="vertical-timeline-element-subtitle">
                 {element.location}
               </h5>
-             {/*  <p>{element.description}</p> */}
               <p className="description" dangerouslySetInnerHTML={{ __html: element.description }}></p>
-              {/* <p id="description1">{element.description1}</p>
-              <p id="description2">{element.description2}</p>
-              <p id="description3">{element.description3}</p>
-              <p id="description4">{element.description4}</p> */}
+
               {showButton && (
                 <a
-                  className={`button ${isWorkIcon ? "workButton" : "schoolButton"
-                    }`}
+                     className="button workButton"
                   href="/"
                 >
                   {element.buttonText}
