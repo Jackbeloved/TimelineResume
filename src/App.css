@@ -57,10 +57,12 @@ body {
 
 .linkedin {
   font-size: 1.5em;
-  text-align: center;
   font-family: "Bebas Neue", sans-serif;
   cursor: pointer;
+  text-align: center;
   text-decoration: none;
+  display: block;
+  margin: 0 auto;
 }
 
 .email {

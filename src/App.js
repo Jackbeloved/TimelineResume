@@ -31,10 +31,10 @@ function App() {
       {darkMode ? "Light Mode" : "Dark Mode"}
     </button>
       <h1 className="title">Hi, I'm Jack Zhou</h1>
-      <h2 className="subtitle">Data@CBA | Data Enthusiast</h2>
-      <h2 className="linkedin" href="https://www.linkedin.com/in/jzhou-da/" target="_blank" rel="noopener noreferrer">
-      <strong>LinkedIn:</strong> linkedin.com/in/jzhou-da
-      </h2>
+      <h2 className="subtitle">Data Enthusiast</h2>
+      <a className="linkedin" href="https://www.linkedin.com/in/jzhou-da/" target="_blank" rel="noopener noreferrer">
+        <strong>LinkedIn:</strong> linkedin.com/in/jzhou-da
+      </a>
       <h2 className="email" onClick={handleEmailClick}><strong>Email:</strong> jackmkj@gmail.com</h2>
       <VerticalTimeline>
         {timelineElements.map((element) => {
